@@ -31,6 +31,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
 import { ListsResolver } from './_resolvers/lists.resolver';
 import { UserService } from './_services/user.service';
 import { AuthGuard } from './_guards/auth.guard';
@@ -38,7 +39,7 @@ import { AlertifyService } from './_services/alertify.service';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
-
+import { MemberMessagesComponent} from './members/member-messages/member-messages.component';
 
 
 
@@ -69,7 +70,8 @@ export class CustomHammerConfig extends HammerGestureConfig {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      MemberMessagesComponent
    ],
    imports: [
       BrowserModule,
@@ -104,6 +106,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
       MemberListResolver,
       MemberEditResolver,
       ListsResolver,
+      MessagesResolver,
       PreventUnsavedChanges,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig}
    ],
